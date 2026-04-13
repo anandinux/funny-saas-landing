@@ -6,7 +6,13 @@
   <title>MeetingMorphosis – Turn Meetings Into Work</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
-  <style>body { font-family: 'Inter', sans-serif; }</style>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    details > summary { list-style: none; }
+    details > summary::-webkit-details-marker { display: none; }
+    details[open] .faq-icon { transform: rotate(45deg); }
+    .faq-icon { transition: transform 0.2s ease; }
+  </style>
 </head>
 <body class="bg-white text-gray-900">
 
@@ -19,6 +25,7 @@
     <div class="hidden md:flex gap-6 text-sm font-medium text-gray-500">
       <a href="#features" class="hover:text-gray-900 transition">Features</a>
       <a href="#testimonial" class="hover:text-gray-900 transition">Testimonials</a>
+      <a href="#faq" class="hover:text-gray-900 transition">FAQ</a>
       <a href="#pricing" class="hover:text-gray-900 transition">Pricing</a>
     </div>
     <a href="#cta" class="bg-indigo-600 text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-indigo-700 transition">Try Free</a>
@@ -126,6 +133,93 @@
       <div><div class="text-4xl font-black text-indigo-600">83%</div><div class="text-sm text-gray-500 mt-1">fewer pointless meetings</div></div>
       <div><div class="text-4xl font-black text-indigo-600">4.2hrs</div><div class="text-sm text-gray-500 mt-1">saved per employee/week</div></div>
       <div><div class="text-4xl font-black text-indigo-600">10k+</div><div class="text-sm text-gray-500 mt-1">teams using MeetingMorphosis</div></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="bg-gray-50 py-20">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <h2 class="text-4xl font-black mb-4">Frequently Asked Questions</h2>
+        <p class="text-gray-500 text-lg">(Questions we actually get. Answers we actually mean.)</p>
+      </div>
+      <div class="space-y-4">
+
+        <details class="bg-white rounded-2xl border border-gray-100 shadow-sm group">
+          <summary class="flex items-center justify-between px-6 py-5 cursor-pointer select-none">
+            <span class="font-semibold text-gray-900">Does MeetingMorphosis record my meetings?</span>
+            <span class="faq-icon text-indigo-600 text-2xl font-light ml-4">+</span>
+          </summary>
+          <div class="px-6 pb-5 text-gray-500 text-sm leading-relaxed border-t border-gray-50 pt-4">
+            Yes — with your consent and your team's consent. We're not your creepy IT department. MeetingMorphosis uses secure, encrypted audio processing and never stores raw audio after transcription. Your secrets about the office snack budget are safe with us.
+          </div>
+        </details>
+
+        <details class="bg-white rounded-2xl border border-gray-100 shadow-sm group">
+          <summary class="flex items-center justify-between px-6 py-5 cursor-pointer select-none">
+            <span class="font-semibold text-gray-900">What integrations do you support?</span>
+            <span class="faq-icon text-indigo-600 text-2xl font-light ml-4">+</span>
+          </summary>
+          <div class="px-6 pb-5 text-gray-500 text-sm leading-relaxed border-t border-gray-50 pt-4">
+            Jira, Asana, Linear, Notion, Slack, Google Meet, Zoom, Microsoft Teams, and any tool your team insists on using despite everyone else's protests. If it has an API, we'll talk to it. If it doesn't, we'll judge it quietly.
+          </div>
+        </details>
+
+        <details class="bg-white rounded-2xl border border-gray-100 shadow-sm group">
+          <summary class="flex items-center justify-between px-6 py-5 cursor-pointer select-none">
+            <span class="font-semibold text-gray-900">Will this actually reduce the number of meetings we have?</span>
+            <span class="faq-icon text-indigo-600 text-2xl font-light ml-4">+</span>
+          </summary>
+          <div class="px-6 pb-5 text-gray-500 text-sm leading-relaxed border-t border-gray-50 pt-4">
+            On average, teams cut meetings by 40–60% within the first month. The remaining meetings actually accomplish things, which is a surreal experience for most teams. Side effects may include: getting work done, leaving on time, and a vague feeling that something is different but you can't quite place it.
+          </div>
+        </details>
+
+        <details class="bg-white rounded-2xl border border-gray-100 shadow-sm group">
+          <summary class="flex items-center justify-between px-6 py-5 cursor-pointer select-none">
+            <span class="font-semibold text-gray-900">Is my data secure and private?</span>
+            <span class="faq-icon text-indigo-600 text-2xl font-light ml-4">+</span>
+          </summary>
+          <div class="px-6 pb-5 text-gray-500 text-sm leading-relaxed border-t border-gray-50 pt-4">
+            SOC 2 Type II certified, GDPR compliant, end-to-end encrypted, and hosted in your region of choice. We take security more seriously than your company takes "this meeting will be quick." Your data belongs to you — not us, not advertisers, not that one person in IT who always seems a little too curious.
+          </div>
+        </details>
+
+        <details class="bg-white rounded-2xl border border-gray-100 shadow-sm group">
+          <summary class="flex items-center justify-between px-6 py-5 cursor-pointer select-none">
+            <span class="font-semibold text-gray-900">What if my team refuses to change how they run meetings?</span>
+            <span class="faq-icon text-indigo-600 text-2xl font-light ml-4">+</span>
+          </summary>
+          <div class="px-6 pb-5 text-gray-500 text-sm leading-relaxed border-t border-gray-50 pt-4">
+            We hear you. Change is hard. MeetingMorphosis works silently in the background — no new habits required. It just shows up, takes notes, assigns tasks, and emails the recap. Your team keeps doing what they do. They just have a slightly guilty feeling when they see how many hours are being logged in the ROI dashboard.
+          </div>
+        </details>
+
+        <details class="bg-white rounded-2xl border border-gray-100 shadow-sm group">
+          <summary class="flex items-center justify-between px-6 py-5 cursor-pointer select-none">
+            <span class="font-semibold text-gray-900">How long does setup take?</span>
+            <span class="faq-icon text-indigo-600 text-2xl font-light ml-4">+</span>
+          </summary>
+          <div class="px-6 pb-5 text-gray-500 text-sm leading-relaxed border-t border-gray-50 pt-4">
+            Under 5 minutes. We don't do onboarding calls (that would be ironic). Connect your calendar, link your task tool, invite your team — done. If it takes longer, we owe you a sincere apology and a refund of your first month.
+          </div>
+        </details>
+
+        <details class="bg-white rounded-2xl border border-gray-100 shadow-sm group">
+          <summary class="flex items-center justify-between px-6 py-5 cursor-pointer select-none">
+            <span class="font-semibold text-gray-900">Is there a free plan?</span>
+            <span class="faq-icon text-indigo-600 text-2xl font-light ml-4">+</span>
+          </summary>
+          <div class="px-6 pb-5 text-gray-500 text-sm leading-relaxed border-t border-gray-50 pt-4">
+            Yes. The Free plan covers up to 5 users, 10 meetings/month, and enough features to ruin your tolerance for bad meetings forever. After that, paid plans start at $12/user/month — roughly the cost of one hour of your time, which we'll give back to you every single week.
+          </div>
+        </details>
+
+      </div>
+
+      <div class="text-center mt-10">
+        <p class="text-gray-400 text-sm">Still have questions? <a href="#" class="text-indigo-600 font-semibold hover:underline">Chat with us</a> — we respond fast because we have fewer meetings to attend.</p>
+      </div>
     </div>
   </section>
 
